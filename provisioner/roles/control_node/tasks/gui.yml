@@ -11,6 +11,9 @@
 - name: ENSURE XRDP IS INSTALLED
   yum: name=xrdp
 
+- name: ENSURE FIREFOX IS INSTALLED
+  yum: name=firefox
+
 - name: ENSURE XFCE IS INSTALLED
   yum:
     name: "@xfce"

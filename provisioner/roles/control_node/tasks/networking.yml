@@ -1,3 +1,22 @@
+- name: Clone workshop-tower-setup repo (NETWORKING MODE)
+  git:
+    accept_hostkey: yes
+    clone: yes
+    dest: /tmp/tower_setup
+    repo: https://github.com/michaelford85/workshop-tower-setup.git
+    force: yes
+
+- name: Move tower setup folder to correct location  (NETWORKING MODE)
+  command: cp -r /tmp/tower_setup/ /home/{{ username }}/
+  when: networking
+
+- name: fix permissions of tower_setup  (NETWORKING MODE)
+  file:
+    path: /home/{{ username }}/tower_setup/
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    recurse: yes
+
 - name: Clone linklight repo (NETWORKING MODE)
   git:
     accept_hostkey: yes
