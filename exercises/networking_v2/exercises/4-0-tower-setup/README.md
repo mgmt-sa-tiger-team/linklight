@@ -47,11 +47,11 @@ After logging in the Job Dashboard will be the default window as shown below.
 
 From the terminal window in your ansible control server, open the file ~/tower_setup/tower_setup.yml. on line 48 (under the task named 'ADD CREDENTIAL INTO TOWER'), change the following line from:
 
-`ssh_key_data: "/home/{{ansible_user}}/.ssh/aws-private.pem"`
+`ssh_key_data: "/home/**{{ansible_user}}**/.ssh/aws-private.pem"`
 
 to
 
-`ssh_key_data: "/home/studentX/.ssh/aws-private.pem"`
+`ssh_key_data: "/home/**studentX**/.ssh/aws-private.pem"`
 
 An inventory is required for Tower to be able to run jobs.  An Inventory is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. In addition, Tower can make use of an existing configuration management data base (cmdb) such as ServiceNow or Infoblox DDI.
 
