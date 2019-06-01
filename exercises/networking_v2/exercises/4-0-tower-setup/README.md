@@ -151,4 +151,4 @@ In the Tower UI, click on the Credentials link on the lefthand menu.  In additio
 # Solution
 You have finished this exercise.  
 
-[Click here to return to the lab guide](../README.md)
+[Click here to return to the exercise list](../)
