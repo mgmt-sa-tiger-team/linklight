@@ -66,7 +66,7 @@ This change is needed as the playbook needs to be given the correct path to **yo
 Once this is completed, you can run the playbook using the `ansible-playbook` command:
 
 ```
-$ ansible-playbook tower_setup.yml
+[studentX@ansible ~]$ ansible-playbook tower_setup.yml
 ```
 
 This will populate your Ansible Tower environment with the following resources:
@@ -79,11 +79,11 @@ An inventory is required for Tower to be able to run jobs.  An Inventory is a co
 
 By default Tower has a **Demo Inventory** setup. After running the `tower_setup.yml` playbook, under the Inventories there will be two inventories, the `Demo Inventory` and the `Workshop Inventory`.  Under the `Workshop Inventory` click the **Hosts** button to see the hosts that have been added to the inventory.
 
-![Tower Inventory](images/workshop_inventory.png)
-
 ***Hosts:***
 
 Hosts are the actual targets upon which playbooks perform automation. In the `Workshop Inventory` created by the `tower_setup.yml` playbook, you should see your four routers, along with the Ansible Tower/Control Server (with an inventory hostname of `ansible`).
+
+![Tower Inventory](images/workshop_inventory.png)
 
 ***Project:***
 
@@ -91,7 +91,7 @@ A project is how actually Playbooks are imported into Red Hat Ansible Tower.  Yo
 
 > For more information on Projects in Tower, please [refer to the documentation](https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html)
 
-For these exercises, we are going to use an already existing Github repository and turn it into a project in Tower. Under the Inventories there will be one project, the `Workshop Project`. Click into it in order to see the Github repository that Tower is pulling playbooks from.
+For these exercises, we are going to use an already existing Github repository and turn it into a project in Tower. Under the Inventories there will be two projects, the default `Demo Project` and the `Workshop Project` created by the `tower_setup.yml` playbook. Click into it in order to see the Github repository that Tower is pulling playbooks from.
 
 ![picture showing workshop project](images/workshop_project.png)
 
@@ -124,9 +124,7 @@ In the Tower UI, click on the Credentials link on the lefthand menu.  In additio
 
 Run the playbook - exit back into the command line of the control host and execute the following:
 
-```
-[student1@ansible ~]$ ansible-playbook tower_setup.yml
-```
+
 # Playbook Output
 
 The output will look as follows.
