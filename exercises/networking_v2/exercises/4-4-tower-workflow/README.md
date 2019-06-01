@@ -34,9 +34,9 @@ When you click the **SAVE** the **WORKFLOW VISUALIZER** should automatically ope
 
 By default only a green **START** button will appear.  Click on the **START** button.  
 
-The **ADD A NODE** window will appear on the right.  Select the **BACKUP NETWORK CONFIG** job template that was created earlier.  Use the drop down box to select run.  Click the green **SELECT** button.
+The **ADD A NODE** window will appear on the right.  Select the **BACKUP NETWORK CONFIG** job template that was created earlier.  Use the drop down box to select ***ALWAYS*** under **RUN**.  Click the green **SELECT** button.
 
-![add a template](images/add-a-node.png)
+![add a node](images/add-a-node.png)
 
 The **BACKUP NETWORK CONFIG** job template is now a node.  Job or workflow templates are linked together using a graph-like structure called nodes. These nodes can be jobs, project syncs, or inventory syncs. A template can be part of different workflows or used multiple times in the same workflow. A copy of the graph structure is saved to a workflow job when you launch the workflow.
 
@@ -44,7 +44,7 @@ The **BACKUP NETWORK CONFIG** job template is now a node.  Job or workflow templ
 
 ## Step 3
 
-Hover over the **BACKUP NETWORK CONFIG** node and click the green **+** symbol.  The **ADD A TEMPLATE** window will appear again.  This time select the **CONFIGURE BANNER** job template.  For the **Run** parameter select **On Success** from the drop down menu.
+Hover over the **BACKUP NETWORK CONFIG** node and click the green **+** symbol.  The **ADD A NODE** window will appear again.  This time select the **CONFIGURE BANNER** job template.  For the **Run** parameter select **On Success** from the drop down menu.
 
 You will not be able to click **SELECT** until you pre-populate the prompt.  Just fill out the **PROMPT** with your desired banner.
 
@@ -54,7 +54,7 @@ A green line should exist between **BACKUP NETWORK CONFIG** and **CONFIGURE BANN
 
 ## Step 4
 
-Hover over the **BACKUP NETWORK CONFIG** node (not the **CONFIGURE BANNER** node) and click the green **+** symbol.  The **ADD A TEMPLATE** will appear again.
+Hover over the **BACKUP NETWORK CONFIG** node (not the **CONFIGURE BANNER** node) and click the green **+** symbol.  The **ADD A NODE** will appear again.
 
 This time select the **CONFIGURE USER** job template.  For the **Run** parameter and select **On Success** from the drop down menu.  Just like the previous step fill out the prompt or it will not let you **SELECT** the job.  Once the **SELECT** button appears green click it.
 
@@ -63,9 +63,9 @@ This time select the **CONFIGURE USER** job template.  For the **Run** parameter
 
 ## Step 5
 
-Hover over the **CONFIGURE BANNER** node and click the green **+** symbol.  The **ADD A TEMPLATE** will appear again.
+Hover over the **CONFIGURE BANNER** node and click the green **+** symbol.  The **ADD A NODE** will appear again.
 
-Select the **RESTORE NETWORK CONFIG** job template.  For the **Run** parameter select **On Failure** from the drop down menu.  
+Select the **RESTORE NETWORK CONFIG** job template.  For the **Run** parameter select **On Failure** from the drop down menu.  Once the **SELECT** button appears green click it.
 
 ![configure restore node](images/configure-restore.png)
 
@@ -93,4 +93,4 @@ You have
  - made the workflow robust, if either job template fails it will restore to the specified backup
  - launched the workflow template and explored the **VISUALIZER**
 
-[Click here to return to the lab guide](../README.md)
+[Click here to return to the exercise list](../)
