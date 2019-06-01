@@ -66,10 +66,18 @@ This change is needed as the playbook needs to be given the correct path to **yo
 Once this is completed, you can run the playbook using the `ansible-playbook` command:
 
 ```
-ansible-playbook tower_setup.yml
+$ ansible-playbook tower_setup.yml
 ```
 
-This will populate your Ansible Tower environment with the following elements:
+This will populate your Ansible Tower environment with the following resources:
+
+***Inventory:***
+
+**Project:**
+
+**Credential:**
+
+**Hosts:**
 
 An inventory is required for Tower to be able to run jobs.  An Inventory is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. In addition, Tower can make use of an existing configuration management data base (cmdb) such as ServiceNow or Infoblox DDI.
 
