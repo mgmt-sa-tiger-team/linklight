@@ -107,29 +107,35 @@ Perform an ls -la to look at one files are available in this directory.
 
 ```
 -bash-4.2$ ls -la
-total 44
-drwxr-xr-x. 9 awx awx 4096 Jan 22 19:27 .
-drwxr-x---. 3 awx awx   69 Jan 22 19:33 ..
--rw-r--r--. 1 awx awx  652 Jan 22 15:45 ansible.cfg
-drwxr-xr-x. 4 awx awx   33 Jan 22 18:41 eos
-drwxr-xr-x. 8 awx awx  198 Jan 22 19:27 .git
-drwxr-xr-x. 2 awx awx   21 Jan 22 15:45 group_vars
-drwxr-xr-x. 4 awx awx   33 Jan 22 18:37 ios
-drwxr-xr-x. 4 awx awx   33 Jan 22 18:49 junos
--rw-r--r--. 1 awx awx 2535 Jan 22 19:27 network_backup.yml
--rw-r--r--. 1 awx awx  247 Jan 22 15:45 network_banner.yml
--rw-r--r--. 1 awx awx  252 Jan 22 15:45 network_l3_interface.yml
--rw-r--r--. 1 awx awx  250 Jan 22 15:45 network_restore.yml
-drwxr-xr-x. 2 awx awx   96 Jan 22 15:45 network_setup
--rw-r--r--. 1 awx awx  543 Jan 22 15:45 network_system.yml
--rw-r--r--. 1 awx awx  609 Jan 22 15:45 network_time.yml
--rw-r--r--. 1 awx awx  272 Jan 22 15:45 network_user.yml
--rw-r--r--. 1 awx awx  297 Jan 22 15:45 README.md
--rw-r--r--. 1 awx awx  712 Jan 22 15:45 sample-vars-auto.yml
-drwxr-xr-x. 2 awx awx  103 Jan 22 15:45 templates
+total 68
+drwxr-xr-x. 9 awx awx 4096 Jun  1 18:06 .
+drwxr-x---. 3 awx awx   67 Jun  1 18:59 ..
+-rw-r--r--. 1 awx awx  652 Jun  1 18:06 ansible.cfg
+drwxr-xr-x. 3 awx awx   19 Jun  1 18:06 eos
+-rw-r--r--. 1 awx awx  111 Jun  1 18:06 eos_banner.yaml
+-rw-r--r--. 1 awx awx 1755 Jun  1 18:06 f5_full_lab.yml
+drwxr-xr-x. 8 awx awx  180 Jun  1 18:06 .git
+drwxr-xr-x. 2 awx awx   21 Jun  1 18:06 group_vars
+drwxr-xr-x. 4 awx awx   33 Jun  1 18:59 ios
+-rw-r--r--. 1 awx awx  110 Jun  1 18:06 ios_banner.yaml
+drwxr-xr-x. 3 awx awx   19 Jun  1 18:06 junos
+-rw-r--r--. 1 awx awx  113 Jun  1 18:06 junos_banner.yaml
+-rw-r--r--. 1 awx awx 2855 Jun  1 18:06 network_backup.yml
+-rw-r--r--. 1 awx awx  328 Jun  1 18:06 network_banner.yml
+-rw-r--r--. 1 awx awx  313 Jun  1 18:06 network_commands.yml
+-rw-r--r--. 1 awx awx  252 Jun  1 18:06 network_l3_interface.yml
+-rw-r--r--. 1 awx awx  250 Jun  1 18:06 network_restore.yml
+drwxr-xr-x. 2 awx awx  125 Jun  1 18:06 network_setup
+-rw-r--r--. 1 awx awx  543 Jun  1 18:06 network_system.yml
+-rw-r--r--. 1 awx awx  609 Jun  1 18:06 network_time.yml
+-rw-r--r--. 1 awx awx  272 Jun  1 18:06 network_user.yml
+-rw-r--r--. 1 awx awx  112 Jun  1 18:06 nxos_banner.yaml
+-rw-r--r--. 1 awx awx  297 Jun  1 18:06 README.md
+-rw-r--r--. 1 awx awx  712 Jun  1 18:06 sample-vars-auto.yml
+drwxr-xr-x. 2 awx awx  103 Jun  1 18:06 templates
 ```
 
-The Playbooks (shown as .yml files) should directly correspond to the Github repo: https://github.com/network-automation/tower_workshop
+The Playbooks (shown as .yml files) should directly correspond to the Github repo: https://github.com/michaelford85/tower_workshop
 
 
 # Solution
