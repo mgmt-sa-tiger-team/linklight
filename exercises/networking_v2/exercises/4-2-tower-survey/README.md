@@ -111,4 +111,4 @@ You have
  - Create a self service survey for the job template to fill out the network_banner variable
  - run the vendor agnostic job template on all four routers loading the banner on them
 
-[Click here to return to the lab guide](../README.md)
+[Click here to return to the exercise list](../)
