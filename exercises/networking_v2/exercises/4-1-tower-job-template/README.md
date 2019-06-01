@@ -146,4 +146,4 @@ You have
  - launched the job template from the Ansible Tower UI
  - looked under the covers on the control node to see where the Playbooks are being stored
 
-[Click here to return to the lab guide](../README.md)
+[Click here to return to the exercise list](../)
