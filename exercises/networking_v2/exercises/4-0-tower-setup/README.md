@@ -69,7 +69,45 @@ Once this is completed, you can run the playbook using the `ansible-playbook` co
 [studentX@ansible ~]$ ansible-playbook tower_setup.yml
 ```
 
-This will populate your Ansible Tower environment with the following resources:
+# Playbook Output
+
+The output will look as follows.
+
+```yaml
+
+[studentX@ansible tower_setup]$ ansible-playbook tower_setup.yml
+
+PLAY [TOWER CONFIGURATION WITH PLAYBOOKS] ***********************************************************
+
+TASK [CREATE INVENTORY] *****************************************************************************
+changed: [ansible]
+
+TASK [ADD CONTROL HOST INTO TOWER] ******************************************************************
+changed: [ansible]
+
+TASK [ADD REPO INTO TOWER - PROJECT] ****************************************************************
+changed: [ansible]
+
+TASK [ADD CREDENTIAL INTO TOWER] ********************************************************************
+changed: [ansible]
+
+PLAY [ADD EACH HOST TO INVENTORY] *******************************************************************
+
+TASK [ADD HOST INTO TOWER] **************************************************************************
+changed: [rtr1]
+changed: [rtr2]
+changed: [rtr3]
+changed: [rtr4]
+
+PLAY RECAP ******************************************************************************************
+ansible       : ok=4    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+rtr1          : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+rtr2          : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+rtr3          : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+rtr4          : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+```
+
+Running this playbook will populate your Ansible Tower environment with the following resources:
 
 ***Inventory:***
 
@@ -105,59 +143,7 @@ In the Tower UI, click on the Credentials link on the lefthand menu.  In additio
 
 ![picture showing workshop credential](images/workshop_credential.png)
 
+# Solution
+You have finished this exercise.  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### Step 6: Run the Playbook
-
-Run the playbook - exit back into the command line of the control host and execute the following:
-
-
-# Playbook Output
-
-The output will look as follows.
-
-```yaml
-
-[studentX@ansible tower_setup]$ ansible-playbook tower_setup.yml
-
-PLAY [TOWER CONFIGURATION WITH PLAYBOOKS] ***************************************************************
-
-TASK [CREATE INVENTORY] *********************************************************************************
-changed: [ansible]
-
-TASK [ADD CONTROL HOST INTO TOWER] **********************************************************************
-changed: [ansible]
-
-TASK [ADD REPO INTO TOWER - PROJECT] ********************************************************************
-changed: [ansible]
-
-TASK [ADD CREDENTIAL INTO TOWER] ************************************************************************
-changed: [ansible]
-
-PLAY [ADD EACH HOST TO INVENTORY] ***********************************************************************
-
-TASK [ADD HOST INTO TOWER] ******************************************************************************
-changed: [rtr1]
-changed: [rtr2]
-changed: [rtr3]
-changed: [rtr4]
-
-PLAY RECAP **********************************************************************************************
-ansible                    : ok=4    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-rtr1                       : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-rtr2                       : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-rtr3                       : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-rtr4                       : ok=1    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+[Click here to return to the lab guide](../README.md)
