@@ -11,7 +11,7 @@
 
 Demonstrate a vendor agnostic job template for user creation.  This job will configure a specified user through a survey.
 
-This exercise will differ from the previous exercise by automating the creation of the survey.  We will use a supplied survey specification file (`user.json`) along with the [tower_job_template module](https://docs.ansible.com/ansible/latest/modules/tower_job_template_module.html) to quickly provision the job into Ansible Tower.
+This exercise will differ from the previous exercise by automating the creation of the survey.  We will use a supplied survey specification file (`user.json`) and playbook (`userjob.yml`) to quickly provision the job into Ansible Tower.
 
 # Guide
 
@@ -32,7 +32,7 @@ From here, you can inspect the two files, `user.json` and `userjob.yml`. `userjo
 Launch the job with the `ansible-playbook` command.
 
 ```
-ansible-playbook userjob.yml
+[studentX@ansible tower-setup]$ ansible-playbook userjob.yml
 ```
 
 ## Playbook Output
@@ -40,7 +40,7 @@ ansible-playbook userjob.yml
 Here is the Playbook output:
 
 ```
-[student1@ansible tower-setup]$ ansible-playbook userjob.yml
+[studentX@ansible tower-setup]$ ansible-playbook userjob.yml
 
 PLAY [TOWER CONFIGURATION IN PLAYBOOK FORM] ************************************
 
