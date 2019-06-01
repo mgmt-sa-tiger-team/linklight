@@ -9,15 +9,16 @@
 
 Populate Red Hat Ansible Tower with all required resources.
 
-To run an Ansible Playbook in Tower we need to create a **Job Template**.  A **Job Template** requires:
+
+
+# Guide
+
+To run an Ansible Playbook in Tower we need to create a **Job Template**.  A **Job Template** requires the following resources:
  - An **Inventory** to run the job against
  - A **Credential** is used to login to devices.
  - A **Project** which contains Playbooks
 
-# Guide
-
-
-There are multiple ways we can quickly setup Red Hat Ansible Tower.  For this workshop, we are giving you an Ansible playbooks to help automate the setup.
+There are multiple ways we can quickly setup Red Hat Ansible Tower with the above resources.  For this workshop, we are giving you an Ansible playbook to automate the setup.
 
 ## Step 1: Request Tower Workshop License
 
