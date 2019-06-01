@@ -17,37 +17,17 @@ This exercise will differ from the previous exercise by automating the creation 
 
 ## Step 1:
 
-Make sure you are on the control node cli. Using your favorite text editor (`vim` and `nano` are available on the control host) create a new file called `userjob.yml`.
+Make sure you are on the control node terminal (accessed either through SSH or RDP). Navigate to the `~/tower_setup` directory:
 
 ```
----
-- name: TOWER CONFIGURATION IN PLAYBOOK FORM
-  hosts: ansible
-  connection: local
-  become: yes
-  gather_facts: no
-  tasks:
+[studentX@ansible ~]$ cd ~/tower_setup/
 
-    - name: CREATE USER JOB TEMPLATE
-      tower_job_template:
-        name: "CONFIGURE USER"
-        job_type: "run"
-        inventory: "Workshop Inventory"
-        project: "Workshop Project"
-        playbook: "network_user.yml"
-        credential: "Workshop Credential"
-        survey_enabled: true
-        survey_spec: "{{ lookup('template', '{{playbook_dir}}/user.json') }}"
-        tower_username: admin
-        tower_password: ansible
-        tower_host: https://localhost
 ```
+
+From here, you can inspect the two files, `user.json` and `userjob.yml`. `userjob.yml` is a playbook that populates Ansible Tower with a Job template called `CONFIGURE USER`, which will add a new user to your routers. The playbook uses the contents of `user.json` to automatically create a survey that will ask for user information (username, password/SSH key, privilege level).
+
 
 ## Step 2:
-
-Copy this [user.json](user.json) file and make sure its in the same folder as your userjob.yml Ansible Playbook.
-
-## Step 3:
 
 Launch the job with the `ansible-playbook` command.
 
@@ -60,7 +40,7 @@ ansible-playbook userjob.yml
 Here is the Playbook output:
 
 ```
-[student1@ansible ~]$ ansible-playbook userjob.yml
+[student1@ansible tower-setup]$ ansible-playbook userjob.yml
 
 PLAY [TOWER CONFIGURATION IN PLAYBOOK FORM] ************************************
 
@@ -71,7 +51,7 @@ PLAY RECAP *********************************************************************
 ansible                    : ok=1    changed=1    unreachable=0    failed=0    skipped=0
 ```
 
-## Step 4
+## Step 3
 
 Click the Templates button the left menu.
 
@@ -85,7 +65,7 @@ Click the rocket button to launch the job.
 
 ![rocket button](images/rocket.png)
 
-## Step 5
+## Step 4
 
 Fill out the survey, click the green **NEXT** button, then click the green **LAUNCH** button.
 
@@ -120,4 +100,4 @@ You have
  - launched the job template from the Ansible Tower UI
  - looked under the covers on the control node to see where the Playbooks are being stored
 
-[Click here to return to the lab guide](../README.md)
+[Click here to return to the exercise list](../)
