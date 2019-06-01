@@ -34,9 +34,9 @@ When you click the **SAVE** the **WORKFLOW VISUALIZER** should automatically ope
 
 By default only a green **START** button will appear.  Click on the **START** button.  
 
-The **ADD A TEMPLATE** window will appear on the right.  Select the **BACKUP NETWORK CONFIG** job template that was created earlier.  Use the drop down box to select run.  Click the green **SELECT** button.
+The **ADD A NODE** window will appear on the right.  Select the **BACKUP NETWORK CONFIG** job template that was created earlier.  Use the drop down box to select run.  Click the green **SELECT** button.
 
-![add a template](images/add-a-template.png)
+![add a template](images/add-a-node.png)
 
 The **BACKUP NETWORK CONFIG** job template is now a node.  Job or workflow templates are linked together using a graph-like structure called nodes. These nodes can be jobs, project syncs, or inventory syncs. A template can be part of different workflows or used multiple times in the same workflow. A copy of the graph structure is saved to a workflow job when you launch the workflow.
 
