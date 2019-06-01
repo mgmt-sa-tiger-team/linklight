@@ -51,7 +51,7 @@ Afterward, the Job Dashboard will be the default window as shown below.
 
 ## Step 3: Using the provided Ansible playbook to populate Ansible Tower
 
-From the terminal window in your ansible control server, open the file ~/tower_setup/tower_setup.yml. on line 48 (under the task named 'ADD CREDENTIAL INTO TOWER'), change the following line from:
+From the terminal window in your ansible control server, open the file `~/tower_setup/tower_setup.yml`. on line 48 (under the task named 'ADD CREDENTIAL INTO TOWER'), change the following line from:
 
 `ssh_key_data: "/home/{{ansible_user}}/.ssh/aws-private.pem"`
 
@@ -61,7 +61,15 @@ to
 
 Where `X` is the number you have been assigned by the instructor.
 
-This change is needed as the playbook needs to be given the correct path to your SSH private key. As each student has a different number, this will be unique for everyone.
+This change is needed as the playbook needs to be given the correct path to **your** SSH private key. As each student has a different number, this path will be unique for everyone.
+
+Once this is completed, you can run the playbook using the `ansible-playbook` command:
+
+```
+ansible-playbook tower_setup.yml
+```
+
+This will populate your Ansible Tower environment with the following elements:
 
 An inventory is required for Tower to be able to run jobs.  An Inventory is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. In addition, Tower can make use of an existing configuration management data base (cmdb) such as ServiceNow or Infoblox DDI.
 
