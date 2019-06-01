@@ -38,7 +38,13 @@ Login information:
 - The username will be `admin`
 - password provided by instructor (typically 'ansible')
 
-After logging in the Job Dashboard will be the default window as shown below.
+After logging in, you will be presented with a prompt for your Ansible Tower license:
+
+![Tower Job Dashboard](images/tower_license.png)
+
+Point to the license file you requested and downloaded, click the checkbox agreeing to the EULA and click submit.
+
+Afterward, the Job Dashboard will be the default window as shown below.
 
 ![Tower Job Dashboard](images/tower_login.png)
 
@@ -47,11 +53,15 @@ After logging in the Job Dashboard will be the default window as shown below.
 
 From the terminal window in your ansible control server, open the file ~/tower_setup/tower_setup.yml. on line 48 (under the task named 'ADD CREDENTIAL INTO TOWER'), change the following line from:
 
-`ssh_key_data: "/home/**{{ansible_user}}**/.ssh/aws-private.pem"`
+`ssh_key_data: "/home/{{ansible_user}}/.ssh/aws-private.pem"`
 
 to
 
-`ssh_key_data: "/home/**studentX**/.ssh/aws-private.pem"`
+`ssh_key_data: "/home/studentX/.ssh/aws-private.pem"`
+
+Where `X` is the number you have been assigned by the instructor.
+
+This change is needed as the playbook needs to be given the correct path to your SSH private key. As each student has a different number, this will be unique for everyone.
 
 An inventory is required for Tower to be able to run jobs.  An Inventory is a collection of hosts against which jobs may be launched, the same as an Ansible inventory file. In addition, Tower can make use of an existing configuration management data base (cmdb) such as ServiceNow or Infoblox DDI.
 
