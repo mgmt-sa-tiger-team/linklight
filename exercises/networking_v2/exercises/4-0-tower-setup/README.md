@@ -74,7 +74,9 @@ Once this is completed, you can run the playbook using the `ansible-playbook` co
 
 # Playbook Output
 
-The output will look as follows.
+The output will look as follows:
+
+> NOTE: you may see warnings as part of the output; you can ignore these.
 
 ```yaml
 
