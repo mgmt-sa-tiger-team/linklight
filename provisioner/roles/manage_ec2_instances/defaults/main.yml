@@ -51,8 +51,8 @@ ec2_instance_types:
     os_type: linux
     disk_space: 20
     architecture: x86_64
-    #filter: "cisco-CSR*BYOL*"
-    filter: "cisco-CSR*BYOL for Maximum*"
+    filter: "cisco-CSR*BYOL*"
+    #filter: "cisco-CSR*BYOL for Maximum*"
     os: ios
 
   # Look for owner 309956199498 to find official Red Hat AMIs
