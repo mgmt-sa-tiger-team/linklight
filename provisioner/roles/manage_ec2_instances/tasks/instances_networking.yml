@@ -40,13 +40,15 @@
     rtr1_ami: >
       {{ amis.images | selectattr('name', 'defined') | sort(attribute='creation_date') | last }}
 
+
 - name: Create EC2 instances for rtr1 node (NETWORKING MODE)
   ec2:
     assign_public_ip: yes
     key_name: "{{ ec2_name_prefix }}-key"
     group: "{{ ec2_security_group }}"
     instance_type: "{{ ec2_instance_types[rtr1_node].size }}"
-    image: "{{ rtr1_ami.image_id }}"
+    # image: "{{ rtr1_ami.image_id }}"
+    image: cisco-CSR-trhardy-20190115134805.16.10.01-BYOL-HVM
     region: "{{ ec2_region }}"
     exact_count: "{{ student_total }}"
     count_tag:
@@ -100,7 +102,8 @@
     key_name: "{{ ec2_name_prefix }}-key"
     group: "{{ ec2_security_group2 }}"
     instance_type: "{{ ec2_instance_types[rtr2_node].size }}"
-    image: "{{ rtr2_ami.image_id }}"
+    # image: "{{ rtr2_ami.image_id }}"
+    image: cisco-CSR-trhardy-20190115134805.16.10.01-BYOL-HVM
     region: "{{ ec2_region }}"
     exact_count: "{{ student_total }}"
     count_tag:
@@ -153,7 +156,8 @@
       key_name: "{{ ec2_name_prefix }}-key"
       group: "{{ ec2_security_group }}"
       instance_type: "{{ ec2_instance_types[rtr3_node].size }}"
-      image: "{{ rtr3_ami.image_id }}"
+      # image: "{{ rtr3_ami.image_id }}"
+      image: cisco-CSR-trhardy-20190115134805.16.10.01-BYOL-HVM
       region: "{{ ec2_region }}"
       exact_count: "{{ student_total }}"
       count_tag:
@@ -206,7 +210,8 @@
       key_name: "{{ ec2_name_prefix }}-key"
       group: "{{ ec2_security_group2 }}"
       instance_type: "{{ ec2_instance_types[rtr4_node].size }}"
-      image: "{{ rtr4_ami.image_id }}"
+      # image: "{{ rtr4_ami.image_id }}"
+      image: cisco-CSR-trhardy-20190115134805.16.10.01-BYOL-HVM
       region: "{{ ec2_region }}"
       exact_count: "{{ student_total }}"
       count_tag:
