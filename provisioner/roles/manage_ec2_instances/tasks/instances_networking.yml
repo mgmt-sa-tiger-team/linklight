@@ -31,6 +31,10 @@
       architecture: "{{ ec2_instance_types[rtr1_node].architecture }}"
   register: amis
 
+- name: Print AMIs
+  debug:
+    var: amis
+
 - name: save ami for rtr1 (NETWORKING MODE)
   set_fact:
     rtr1_ami: >
