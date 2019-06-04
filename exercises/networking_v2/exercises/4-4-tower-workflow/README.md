@@ -65,7 +65,6 @@ This time select the **CONFIGURE USER** job template.  For the **Run** parameter
 
 Return to the **templates** menu and click the rocket ship to launch the **WORKSHOP WORKFLOW** workflow template.
 
-![workflow job launched](images/running-workflow.png)
 
 At any time during the workflow job you can select an individual job template by clicking on the node to see the status.
 
