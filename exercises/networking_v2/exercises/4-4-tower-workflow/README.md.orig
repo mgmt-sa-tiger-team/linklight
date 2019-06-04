@@ -63,6 +63,22 @@ This time select the **CONFIGURE USER** job template.  For the **Run** parameter
 
 ## Step 5
 
+Hover over the **CONFIGURE BANNER** node and click the green **+** symbol.  The **ADD A NODE** will appear again.
+
+Select the **RESTORE NETWORK CONFIG** job template.  For the **Run** parameter select **On Failure** from the drop down menu.  Once the **SELECT** button appears green click it.
+
+![configure restore node](images/configure-restore.png)
+
+## Step 6
+
+Hover over the **CONFIGURE USER** node and click the blue **chain** symbol.  Now click on the existing **RESTORE NETWORK CONFIG**.  A **ADD LINK** window will appear.  For the **RUN** parameter choose **On Failure**.
+
+![restore node](images/completed-workflow.png)
+
+Click the green **SAVE** button
+
+## Step 7
+
 Return to the **templates** menu and click the rocket ship to launch the **WORKSHOP WORKFLOW** workflow template.
 
 ![workflow job launched](images/running-workflow.png)
@@ -74,6 +90,7 @@ You have finished this exercise.
 
 You have
  - created a workflow template that creates a backup, attempts to create a user and banner for all network nodes
+ - made the workflow robust, if either job template fails it will restore to the specified backup
  - launched the workflow template and explored the **VISUALIZER**
 
 [Click here to return to the exercise list](../)
